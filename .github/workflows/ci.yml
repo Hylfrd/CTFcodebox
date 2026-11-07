@@ -15,12 +15,8 @@ concurrency:
 
 jobs:
   check:
-    name: 检查 (${{ matrix.os }})
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, windows-latest]
+    name: Windows 构建检查
+    runs-on: windows-latest
     steps:
       - name: 获取代码
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
