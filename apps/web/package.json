@@ -1,6 +1,5 @@
 {
   "name": "@ctfcodebox/web",
-  "version": "0.1.0",
   "private": true,
   "type": "module",
   "license": "MIT",
@@ -10,7 +9,7 @@
     "preview": "vite preview --host 127.0.0.1"
   },
   "dependencies": {
-    "@ctfcodebox/core": "0.1.0",
+    "@ctfcodebox/core": "file:../../packages/core",
     "lucide-react": "1.70.0",
     "react": "19.3.1",
     "react-dom": "19.3.1",

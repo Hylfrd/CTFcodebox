@@ -1,6 +1,5 @@
 {
   "name": "@ctfcodebox/cli",
-  "version": "0.1.0",
   "private": true,
   "type": "module",
   "license": "MIT",
@@ -8,6 +7,6 @@
     "ctfcodebox": "dist/index.js"
   },
   "dependencies": {
-    "@ctfcodebox/core": "0.1.0"
+    "@ctfcodebox/core": "file:../../packages/core"
   }
 }

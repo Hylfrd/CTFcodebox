@@ -1,10 +1,5 @@
 #!/usr/bin/env node
 import { registry } from '@ctfcodebox/core';
-import { readFileSync } from 'node:fs';
-
-const { version } = JSON.parse(
-  readFileSync(new URL('../package.json', import.meta.url), 'utf8'),
-) as { version: string };
 const help = `CTFcodebox 本地工具箱
 
 用法：ctfcodebox <命令> [选项]
@@ -16,7 +11,6 @@ const help = `CTFcodebox 本地工具箱
 选项：
   --json        输出结构化 JSON
   --help, -h    查看帮助
-  --version     查看版本
 
 当前为工程框架，具体工具将在后续接入。
 `;
@@ -25,8 +19,6 @@ const args = process.argv.slice(2);
 const [command, ...flags] = args;
 if (!command || command === '--help' || command === '-h') {
   process.stdout.write(help);
-} else if (command === '--version') {
-  process.stdout.write(`${version}\n`);
 } else if (
   (command === 'modules' || command === 'tools') &&
   flags.every((flag) => flag === '--json')
